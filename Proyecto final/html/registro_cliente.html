@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro cliente</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/utilidades.js"></script>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <img src="../recursos/logo.png" alt="Logo" class="logo">
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 style="text-align: center;">Registro de clientes</h1><br>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <form class="border border-5 p-2 p-3 mb-2 bg-dark text-white" id="registro">
+
+                    <div class="dropdown mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Seleccione</label>
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 425px; text-align: left;">
+                          Tipo de identificación
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Tarjeta de identidad</a></li>
+                          <li><a class="dropdown-item" href="#">Cédula de ciudadania</a></li>
+                          <li><a class="dropdown-item" href="#">Cédula de extranjeria</a></li>
+                        </ul>
+                      </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Número de identificacion</label>
+                        <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class=" mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Telefono celular</label>
+                        <div class="d-flex flex-row mb-2">
+                          <input type="text" id="telefono" placeholder="dijite su numero de celular:" size="50%">
+                      
+                      
+                          <input type="button" value="Agregar" 
+                          onclick="agregarTelefono()">
+                        </div>
+                    </div>
+
+                    <div class="form-floating">
+                      Telefono Agregados
+                      <ul id="telefonos"></ul>
+                    </div><br>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Telefono fijo</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="dropdown mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Seleccione</label>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                          <option selected>Departamento de residencia</option>
+                          <option value="1">Atlantico</option>
+                          <option value="2">Cundinamarca</option>
+                          <option value="3">Bolivar</option>
+                        </select>
+                    </div>
+
+                    <div class="dropdown mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Seleccione</label>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                          <option selected>Departamento de residencia</option>
+                          <option value="1">Bogota</option>
+                          <option value="2">Barranquilla</option>
+                          <option value="3">Cartagena</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Dirección de residencia</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Redes sociales</label>
+                      <div class="d-flex flex-row mb-2">
+                        <input type="tel" class="form-control" id="formGroupExampleInput2" placeholder="Anote su numero de WhatsApp">&ensp;
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Anote usuario de Facebook">
+                      </div>
+                      <div class="d-flex flex-row mb-2">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Anote usuario de Instagram">&ensp;
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Anote usuario de Twitter">
+                    </div>
+                  </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Comfirmar contraseña</label>
+                        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary" style="text-align: center;" onclick="registrar()">Registrar</button>&emsp;
+                    <button type="button" class="btn btn-outline-primary" style="text-align: center;" onclick="window.location = 'logueo.html'" target="_new" href="_blank">Iniciar sesion</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+  
+    <footer class="navbar navbar-expand-lg bg-dark text-white">
+        <div class="container-fluid">
+            <img src="../recursos/logo.png" alt="Logo" class="logo">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                <li class="nav-item" style=" margin-left: 50px; padding-right: 100px;">
+                    <h6>Contactanos:</h6>
+                </li>
+
+                <li class="nav-item" >
+                    <img src="../recursos/facebook.png" alt="Facebook">
+                    <a class="nav-link active" aria-current="page" href="#">Facebook</a>
+                </li>
+
+                <li class="nav-item" >
+                    <img src="../recursos/instagram.png" alt="Instagram">
+                    <a class="nav-link active" aria-current="page" href="#">Instagram</a>
+                </li>
+
+                <li class="nav-item" >
+                    <img src="../recursos/whatsapp.png" alt="WhatsApp">
+                    <a class="nav-link active" aria-current="page" href="#">WhatsApp</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

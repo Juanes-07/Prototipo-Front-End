@@ -1,0 +1,43 @@
+body{
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.bold{
+    font-style: bold;
+}
+
+/* Gestion compras */
+.bg{
+    background-color: #ffff;
+}
+
+/* Principal */
+.logo{
+    height: 36px; 
+    width: 36px;
+    margin-left: 100px;
+}
+
+.busqueda{
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.bt-nav{
+    margin-right: 10px;
+}
+
+.imgFondo{
+    background-image: url(../recursos/amg-gt-r-pro.jpg);
+    height: 700px;
+}
+
+/* Registro empleados */
+.fijar{
+    resize: none;
+}
+
+/* Seguimiento cliente */
